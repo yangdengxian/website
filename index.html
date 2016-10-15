@@ -7,7 +7,15 @@
   </head>
   <body>
     <script>
-    location.href="http://viseye.duapp.com/"
+    var url=location.href;
+    switch(location.hostname){
+      case 'viseye.xyz':
+          location.href=url.replace('viseye.xyz','viseye.duapp.com');
+          break;
+      case 'www.viseye.xyz':
+          location.href=url.replace('www.viseye.xyz','viseye.duapp.com');
+          break;
+    }
     /*setTimeout(function(){
         location.href="http://viseye.duapp.com/"
     });*/
