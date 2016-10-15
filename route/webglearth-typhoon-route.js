@@ -15,34 +15,18 @@ module.exports = function(app) {
     //get real-time typhoon information 
     app.get('/webglearthtyphoonapi/typhoonActivity', (req, res) => {
         Typhoon.typhoonActivity().then(info => {
-            res.send({
-                status: 200,
-                data: info,
-                message: 'request success!'
-            });
+            res.send(info);
         }).catch(err => {
-            console.error({
-                status: 501,
-                error: err,
-                message: 'request failure!'
-            });
+            res.send(err);
         });
     });
     //get historical typhoon information 
     app.get('/webglearthtyphoonapi/typhoonList', (req, res) => {
         let year = new Date().getFullYear();
         Typhoon.typhoonList(year).then(info => {
-            res.send({
-                status: 200,
-                data: info,
-                message: 'request success!'
-            });
+            res.send(info);
         }).catch(err => {
-            console.error({
-                status: 501,
-                error: err,
-                message: 'request failure!'
-            });
+             res.send(err);
         });
     });
 }

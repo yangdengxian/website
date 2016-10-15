@@ -45,8 +45,7 @@
 
      $.get(SERVER_URL + "typhoonActivity", function(res) {
          if (res.status === 200) {
-             var data = JSON.parse(res.data);
-             console.info(data, level);
+             var data = res.data;
              addMarkers(data);
              if (data.length > 0) {
                  var lat = data[0]['lat'] - 0,
@@ -123,7 +122,6 @@
          markers.push(marker);
      }
      map.setView(typhoonCenterPnt, level);
-     console.log(markers);
  }
 
  function flyToTyphoonCenter() {
