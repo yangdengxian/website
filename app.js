@@ -9,7 +9,7 @@ const bodyParser=require('body-parser');
 
 const app=express();
 
-app.set('port',(process.env.PORT || 3000));
+app.set('port',(process.env.PORT || 18080));
 
 app.use('/',express.static(path.join(__dirname,'public/')));
 app.use(bodyParser.json());
