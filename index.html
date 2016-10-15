@@ -8,21 +8,14 @@
   <body>
     <script>
     var url=location.href;
-      alert(url)
-alert(location.hostname)
     switch(location.hostname){
       case 'viseye.xyz':
-        alert(url.replace('viseye.xyz','viseye.duapp.com'))
           location.href=url.replace('viseye.xyz','viseye.duapp.com');
           break;
       case 'www.viseye.xyz':
-          alert(url.replace('viseye.xyz','viseye.duapp.com'))
           location.href=url.replace('www.viseye.xyz','viseye.duapp.com');
           break;
     }
-    /*setTimeout(function(){
-        location.href="http://viseye.duapp.com/"
-    });*/
     </script>
   </body>
 </html>
